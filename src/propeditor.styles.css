@@ -1,7 +1,13 @@
-.editor-wrapper-classname {
+.vv-partial-string {
 	
 }
 
-.editor-wrapper-classname .editor-classname {
+.vv-partial-string .segment-before,
+.vv-partial-string .segment-after {
+	opacity: 0.5;
+	line-height: 32px;
+}
+
+.vv-partial-string .segment-input {
 	
 }

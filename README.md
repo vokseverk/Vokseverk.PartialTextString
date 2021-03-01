@@ -1,27 +1,27 @@
-# Umbraco Property Editor Template
+<img align="right" src="images/partialtextstring-icon.png" width="120" height="120" alt="A text input with a '(555)' prefix on top of the Vokseværk 'fire-heart' logo" />
 
-This is our starter project for an Umbraco Property Editor.
+# Partial TextString for Umbraco
 
-## Process
+This is a small extension to a standard "Textbox" editor, that allows
+you to specify a prefix and/or suffix string to show alongside the editor.
 
-Click the **Use this template** button to create a new copy of this repository
-in your own account. Then clone that new repository down to your local machine
-and get started:
+Sometimes that's much better than trying to use the description to explain
+that you should only type in e.g. the username for an email account or similar.
 
-- [ ] Find the `src/package.ent` file and change the constants in there
+## Requirements
 
-- [ ] You may want to change a few things in the `package.xml` and `manifest.xml` files as well
+This package should work in both Umbraco 7 and Umbraco 8.
 
-- [ ] Look for `TODO`, `EDITOR_NAME` and `EDITOR_ALIAS` in various files and change accordingly
+## Screenshots
 
-- [ ] Edit/add/remove files in the `src/` folder and update the files section in the
-`package.xml` file
+### In use on a document
 
-- [ ] Edit the `PropertyConverterV(7|8).cs` files as well
+![The Partial TextString editor](images/partialtextstring-screen.jpg)
 
-- [ ] Edit this README to describe your new property editor :)
 
-- [ ] Create an entry for your new package on [Our Umbraco][OURPKG]
+### Data Type configuration
+
+![The Partial TextString Config Screen](images/partialtextstring-config-screen.jpg)
 
 
 ## Developing & Building
@@ -37,6 +37,3 @@ alias and/or storage type isn't changed.
 
 To update the version number, increment the `packageVersion` entity in the
 `src/package.ent` file.
-
-[OURPKG]: https://our.umbraco.com/member/profile/packages/
- 

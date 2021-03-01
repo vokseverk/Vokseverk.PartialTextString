@@ -7,23 +7,46 @@
 	<propertyEditor>
 		<name>&propertyEditorName;</name>
 		<alias>&packageAlias;</alias>
-		<icon>icon-bulleted-list</icon>
-		<group>lists</group><!-- common,lists,media,people,pickers,rich content -->
+		<icon>icon-window-sizes</icon>
+		<group>common</group><!-- common,lists,media,people,pickers,rich content -->
 		<editor>
-			<valueType>STRING</valueType><!-- STRING,DATETIME,TEXT,INT,JSON -->
+			<valueType>TEXT</valueType><!-- STRING,DATETIME,TEXT,INT,JSON -->
 			<view>&fileBaseName;.editor.html</view>
 		</editor>
-		<!--
-		TODO: Need prevalues?
+
 		<prevalues>
 			<field>
-				<label>Rating</label>
-				<key>rating</key>
-				<description>Rate the content</description>
-				<view>number</view>
+				<label>Text before</label>
+				<key>prefix</key>
+				<description>Text to show before the input field</description>
+				<view>textstring</view>
+			</field>
+			<field>
+				<label>Text after</label>
+				<key>suffix</key>
+				<description>Text to show after the input field</description>
+				<view>textstring</view>
+			</field>
+			<field>
+				<label>Placeholder text</label>
+				<key>placeholder</key>
+				<description>Optional placeholder text for the input field</description>
+				<view>textstring</view>
+			</field>
+			<field>
+				<label>Input styles</label>
+				<key>inputCss</key>
+				<description>CSS for the input field</description>
+				<view>textstring</view>
+			</field>
+			<field>
+				<label>Before/after styles</label>
+				<key>preSuffixCss</key>
+				<description>CSS for the before + after labels</description>
+				<view>textstring</view>
 			</field>
 		</prevalues>
-		-->
+
 		<!--
 		TODO: Need defaultConfig?
 		<defaultConfig>
@@ -32,6 +55,6 @@
 		-->
 	</propertyEditor>
 
-	<javascript>&fileBaseName;.controller.js</javascript>
+	<!-- <javascript>&fileBaseName;.controller.js</javascript> -->
 	<css>&fileBaseName;.styles.css</css>
 </manifest>

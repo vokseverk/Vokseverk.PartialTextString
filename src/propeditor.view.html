@@ -1,3 +1,11 @@
-<div class="editor-wrapper-classname" ng-controller="EDITOR_ALIASController">
-	<input ng-model="model.value" type="text" value="{{model.value}}" class="editor-classname" />
+<div class="vv-partial-string">
+	<span class="segment-before" style="{{model.config.preSuffixCss}}">{{model.config.prefix}}</span>
+	<input
+		class="segment-input"
+		ng-model="model.value"
+		type="text"
+		style="{{model.config.inputCss}}"
+		placeholder="{{model.config.placeholder}}"
+	/>
+	<span class="segment-after" style="{{model.config.preSuffixCss}}">{{model.config.suffix}}</span>
 </div>
