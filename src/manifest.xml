@@ -11,7 +11,7 @@
 		<group>common</group><!-- common,lists,media,people,pickers,rich content -->
 		<editor>
 			<valueType>TEXT</valueType><!-- STRING,DATETIME,TEXT,INT,JSON -->
-			<view>&fileBaseName;.editor.html</view>
+			<view>&fileBaseName;.view.html</view>
 		</editor>
 
 		<prevalues>
