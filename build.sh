@@ -12,7 +12,7 @@ fi
 
 # Copy files
 cp src/*.css dist/package/
-cp src/*.js dist/package/
+# cp src/*.js dist/package/
 cp src/*.html dist/package/
 cp src/lang/*.xml dist/package/
 
