@@ -1,6 +1,6 @@
-<img align="right" src="images/partialtextstring-icon.png" width="120" height="120" alt="A text input with a '(555)' prefix on top of the Vokseværk 'fire-heart' logo" />
-
 # Partial TextString for Umbraco
+
+<img align="right" src="images/vv-partialtextstring-icon.png" width="180" height="180" alt="A text input with a '(555)' prefix inside a square with the Vokseværk ‘fire-heart’ logo" />
 
 This is a small extension to a standard "Textbox" editor, that allows
 you to specify a prefix and/or suffix string to show alongside the editor.

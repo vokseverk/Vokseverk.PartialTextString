@@ -13,6 +13,6 @@
 <!ENTITY fileBaseName "propeditor">
 
 <!ENTITY packageAuthorURL "https://vokseverk.dk">
-<!ENTITY packageIconURL "https://raw.githubusercontent.com/vokseverk/Vokseverk.PartialTextString/main/images/partialtextstring-icon.png">
+<!ENTITY packageIconURL "https://raw.githubusercontent.com/vokseverk/Vokseverk.PartialTextString/main/images/vv-partialtextstring-icon.png">
 <!ENTITY packageURL "https://our.umbraco.com/projects/backoffice-extensions/partial-textstring">
 <!ENTITY packageREADME "Basically a TextString, but you can specify prefix and/or postfix strings to show, which can make it much easier to understand exactly what's supposed to go into the field.">
