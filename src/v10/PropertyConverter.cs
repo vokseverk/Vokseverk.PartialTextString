@@ -10,14 +10,14 @@ using Umbraco.Cms.Core.Models.PublishedContent;
 
 namespace Vokseverk {
 
-	public class KeyValuePropertyConverter : IPropertyValueConverter {
+	public class PartialTextStringConverter : IPropertyValueConverter {
 
 		public bool IsConverter(IPublishedPropertyType propertyType) {
-			return propertyType.EditorAlias.Equals("Vokseverk.KeyValueEditor");
+			return propertyType.EditorAlias.Equals("Vokseverk.PartialTextsString");
 		}
 
 		public Type GetPropertyValueType(IPublishedPropertyType propertyType) {
-			return typeof(List<KeyAndValue>);
+			return typeof(string);
 		}
 
 		public PropertyCacheLevel GetPropertyCacheLevel(IPublishedPropertyType propertyType) {
@@ -27,33 +27,14 @@ namespace Vokseverk {
 		public bool? IsValue(object value, PropertyValueLevel level) {
 			switch (level) {
 				case PropertyValueLevel.Source:
-					return value != null && value is List<KeyAndValue>;
+					return value != null && value is string;
 				default:
 					throw new NotSupportedException($"Invalid level: {level}.");
 			}
 		}
 
 		public object ConvertSourceToIntermediate(IPublishedElement owner, IPublishedPropertyType propertyType, object source, bool preview) {
-			var interList = new List<KeyAndValue>();
-			if (source == null) {
-				return interList;
-			}
-
-			var interString = source.ToString();
-			if (interString.DetectIsJson()) {
-				try {
-					var json = JsonConvert.DeserializeObject<JArray>(interString);
-
-					foreach (var jt in json) {
-						var kvp = new KeyAndValue(jt["key"].ToString(), jt["value"].ToString());
-						interList.Add(kvp);
-					}
-					return interList;
-				}
-				catch { /* Hmm, not JSON after all ... */ }
-			}
-
-			return interList;
+			return source ?? null;
 		}
 
 		public object ConvertIntermediateToObject(IPublishedElement owner, IPublishedPropertyType propertyType, PropertyCacheLevel referenceCacheLevel, object inter, bool preview) {
@@ -61,11 +42,7 @@ namespace Vokseverk {
 				return null;
 			}
 
-			if (inter is List<KeyAndValue>) {
-				return inter;
-			}
-
-			return null;
+			return inter.ToString();
 		}
 
 		public object ConvertIntermediateToXPath(IPublishedElement owner, IPublishedPropertyType propertyType, PropertyCacheLevel referenceCacheLevel, object inter, bool preview) {
@@ -73,29 +50,7 @@ namespace Vokseverk {
 				return null;
 			}
 
-			// TODO: Should this be returned as:
-			// <values>
-			//   <item>
-			//     <key>Name</key>
-			//     <value>Value</value>
-			//   </item>
-			//   ...
-			// </values>
 			return inter.ToString();
-		}
-
-		public class KeyAndValue {
-			public KeyAndValue(string key, string value) {
-				Key = key;
-				Value = value;
-			}
-
-			public string Key { get; }
-			public string Value { get; }
-
-			public override string ToString() {
-				return JsonConvert.SerializeObject(this);
-			}
 		}
 	}
 }
