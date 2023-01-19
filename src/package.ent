@@ -1,18 +1,29 @@
 <!ENTITY packageVersion "1.0.1">
+<!ENTITY packageVersionV9 "2.0.0">
+<!ENTITY packageVersionV10 "3.0.0">
+<!ENTITY packageVersionV11 "4.0.0">
 
 <!ENTITY orgDisplayName "Vokseværk">
 <!ENTITY orgNamespace "Vokseverk">
+
+<!ENTITY packageNamespace "Vokseverk">
+<!ENTITY packageSafeName "PartialTextString">
+<!ENTITY packageAlias "Vokseverk.PartialTextString"><!-- Don't build this from entities! -->
+<!ENTITY packageAuthorURL "https://vokseverk.dk/">
 
 <!ENTITY propertyEditorName "Partial TextString">
 <!ENTITY propertyEditorAlias "PartialTextString">
 
 <!ENTITY packageName "&orgDisplayName; &propertyEditorName;">
-<!ENTITY packageAlias "&orgNamespace;.&propertyEditorAlias;">
 <!ENTITY packageAuthor "&orgDisplayName;">
 
 <!ENTITY fileBaseName "propeditor">
 
-<!ENTITY packageAuthorURL "https://vokseverk.dk">
 <!ENTITY packageIconURL "https://raw.githubusercontent.com/vokseverk/Vokseverk.PartialTextString/main/images/vv-partialtextstring-icon.png">
 <!ENTITY packageURL "https://our.umbraco.com/projects/backoffice-extensions/partial-textstring">
 <!ENTITY packageREADME "Basically a TextString, but you can specify prefix and/or postfix strings to show, which can make it much easier to understand exactly what's supposed to go into the field.">
+
+<!ENTITY packageIconFile "vv-partialtextstring-icon.png">
+<!ENTITY packageRepoURL "https://github.com/vokseverk/Vokseverk.PartialTextstring">
+<!ENTITY packageTags "umbraco textstring partial property-editor umbraco-marketplace">
+<!ENTITY packageDESC "&packageREADME;">
