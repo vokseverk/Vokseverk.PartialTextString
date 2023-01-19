@@ -6,9 +6,13 @@
 	"Category": "Editor Tools",
 	"Screenshots": [
 		{
-			"ImageUrl": "https://raw.githubusercontent.com/vokseverk/REPONAME/main/images/SCREENSHOT_FILE.jpg",
-			"Caption": "Editor Screen with 4 sets of keys and values"
+			"ImageUrl": "https://raw.githubusercontent.com/vokseverk/Vokseverk.PartialTextstring/main/images/partialtextstring-screen.jpg",
+			"Caption": "Examples of how to use the Partial Textstring editor"
+		},
+		{
+			"ImageUrl": "https://raw.githubusercontent.com/vokseverk/Vokseverk.PartialTextstring/main/images/partialtextstring-config-screen.jpg",
+			"Caption": "The datatype configuration screen"
 		}
 	],
-	"Title": "Vokseværk _SOME_NAME_ Editor"
+	"Title": "Vokseværk Partial TextString Editor"
 }
