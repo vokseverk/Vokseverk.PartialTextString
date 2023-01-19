@@ -6,17 +6,17 @@
 <?nuget-build packageAlias="&packageAlias;" ?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<PropertyGroup>
-		<PackageAliasContentFilesContentFilesPath>$(MSBuildThisFileDirectory)..\content\App_Plugins\&packageAlias;\**\*.*</PackageAliasContentFilesContentFilesPath>
+		<PackageAliasContentFilesPath>$(MSBuildThisFileDirectory)..\content\App_Plugins\&packageAlias;\**\*.*</PackageAliasContentFilesPath>
 	</PropertyGroup>
 
 	<Target Name="Copy&packageNamespace;&packageSafeName;PackageAssets" BeforeTargets="Build">
 		<ItemGroup>
-			<PackageAliasContentFilesContentFiles Include="$(PackageAliasContentFilesContentFilesPath)" />
+			<PackageAliasContentFiles Include="$(PackageAliasContentFilesPath)" />
 		</ItemGroup>
-		<Message Text="Copying &packageSafeName; files: $(PackageAliasContentFilesContentFilesPath) - #@(PackageAliasContentFilesContentFiles->Count()) files"  Importance="high" />
+		<Message Text="Copying &packageSafeName; files: $(PackageAliasContentFilesPath) - #@(PackageAliasContentFiles->Count()) files"  Importance="high" />
 		<Copy
-			SourceFiles="@(PackageAliasContentFilesContentFiles)"
-			DestinationFiles="@(PackageAliasContentFilesContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\&packageAlias;\%(RecursiveDir)%(Filename)%(Extension)')"
+			SourceFiles="@(PackageAliasContentFiles)"
+			DestinationFiles="@(PackageAliasContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\&packageAlias;\%(RecursiveDir)%(Filename)%(Extension)')"
 			SkipUnchangedFiles="true" />
 
 	</Target>
