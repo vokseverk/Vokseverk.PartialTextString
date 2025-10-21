@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE manifest [
+	<!ENTITY % packageInfo SYSTEM "../package.ent">
+	%packageInfo;
+]>
+<manifest schema="../../umbraco-package-schema.json">
+	<name>&packageName;</name>
+	<version>&packageVersionV14;</version>
+
+	<extension>
+		<type>propertyEditorUi</type>
+		<name>&propertyEditorName;</name>
+		<alias>&packageAlias;</alias>
+		<element>/App_Plugins/&packageAlias;/partial-textstring.js</element>
+		<elementName>partial-textstring</elementName>
+		<meta>
+			<label>&propertyEditorName;</label>
+			<propertyEditorSchemaAlias>Umbraco.Plain.String</propertyEditorSchemaAlias>
+			<group>common</group>
+			<icon>icon-window-sizes</icon>
+			<settings>
+				<properties>
+					<property>
+						<label>Text before</label>
+						<alias>prefix</alias>
+						<description>Text to show before the input field</description>
+						<propertyEditorUiAlias>Umb.PropertyEditorUi.TextBox</propertyEditorUiAlias>
+					</property>
+					<property>
+						<label>Text after</label>
+						<alias>suffix</alias>
+						<description>Text to show after the input field</description>
+						<propertyEditorUiAlias>Umb.PropertyEditorUi.TextBox</propertyEditorUiAlias>
+					</property>
+					<property>
+						<label>Placeholder text</label>
+						<alias>placeholder</alias>
+						<description>Optional placeholder text for the input field</description>
+						<propertyEditorUiAlias>Umb.PropertyEditorUi.TextBox</propertyEditorUiAlias>
+					</property>
+
+					<!-- Sadly, this is not so straight-forward in Bellissima… -->
+					<!-- <property>
+						<label>Input styles</label>
+						<alias>inputCss</alias>
+						<description>CSS for the input field</description>
+						<propertyEditorUiAlias>Umb.PropertyEditorUi.TextBox</propertyEditorUiAlias>
+					</property> -->
+
+					<property>
+						<label>Before/after styles</label>
+						<alias>preSuffixCss</alias>
+						<description>CSS for the before + after labels</description>
+						<propertyEditorUiAlias>Umb.PropertyEditorUi.TextBox</propertyEditorUiAlias>
+					</property>
+				</properties>
+			</settings>
+		</meta>
+	</extension>
+</manifest>

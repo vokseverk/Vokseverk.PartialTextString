@@ -2,6 +2,7 @@
 <!ENTITY packageVersionV9 "2.0.0">
 <!ENTITY packageVersionV10 "3.0.0">
 <!ENTITY packageVersionV11 "4.0.0">
+<!ENTITY packageVersionV14 "6.0.11">
 
 <!ENTITY orgDisplayName "Vokseværk">
 <!ENTITY orgNamespace "Vokseverk">
