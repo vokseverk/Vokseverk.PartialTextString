@@ -20,14 +20,14 @@ class PartialTextString extends LitElement {
 		this.prefixText = data.getValueByAlias('prefix') || null
 		this.suffixText = data.getValueByAlias('suffix') || null
 		this.inputPlaceholder = data.getValueByAlias('placeholder') || ''
-		// this.inputCss = data.getValueByAlias('inputCss') || ''
+		this.inputCss = data.getValueByAlias('inputCss') || ''
 		this.preSuffixCss = data.getValueByAlias('preSuffixCss') || ''
 	}
 
 	render() {
 		return html`
 			${ this.prefixText ? html`<span class="prefix" style=${this.preSuffixCss}>${ this.prefixText }</span>` : '' }
-			<uui-input placeholder=${this.inputPlaceholder} .value=${this.value} @input=${this.changed}></uui-input>
+			<uui-input style=${this.inputCss} placeholder=${this.inputPlaceholder} .value=${this.value} @input=${this.changed}></uui-input>
 			${ this.suffixText ? html`<span class="suffix" style=${this.preSuffixCss}>${ this.suffixText }</span>` : '' }
 		`
 	}

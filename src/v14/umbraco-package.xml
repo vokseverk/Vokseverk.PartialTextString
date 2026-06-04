@@ -39,13 +39,12 @@
 						<propertyEditorUiAlias>Umb.PropertyEditorUi.TextBox</propertyEditorUiAlias>
 					</property>
 
-					<!-- Sadly, this is not so straight-forward in Bellissima… -->
-					<!-- <property>
+					<property>
 						<label>Input styles</label>
 						<alias>inputCss</alias>
 						<description>CSS for the input field</description>
 						<propertyEditorUiAlias>Umb.PropertyEditorUi.TextBox</propertyEditorUiAlias>
-					</property> -->
+					</property>
 
 					<property>
 						<label>Before/after styles</label>
